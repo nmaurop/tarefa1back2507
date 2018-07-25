@@ -17,4 +17,15 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
+
+/*------------------ROUTE RESOURCE----------------------*/
+
 Route::resource('students', 'StudentController');
+
+/*------------------------------------------------------*/
+
+/*-----------------ROUTE FUNCAO DOWNLOADO---------------*/
+
+Route::get('downloadpdf/{id}', 'StudentController@Downloadpdf');
+
+/*------------------------------------------------------*/
