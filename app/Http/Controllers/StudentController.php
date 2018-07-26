@@ -12,6 +12,7 @@ class StudentController extends Controller
     /*---------------------FUNCAO EXTRA DOWNLOAD DE PDF-----------------------*/
 
     public function Downloadpdf($id){
+        $student = Student::findorfail($id);
         $filePath = storage_path('app/localtext/' . $student->boletim);
         return response()->download($filePath, $student->boletim);
         //download(caminho pro arquivo, nome pro arquivo)
